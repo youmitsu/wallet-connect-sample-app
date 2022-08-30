@@ -13,7 +13,9 @@ app.use(
   },
 )
 
-app.listen(8080, () => {
+// @ts-ignore
+const port = parseInt(process.env.PORT) || 8080
+app.listen(port, () => {
   console.log('Start on port 8080.')
 })
 
